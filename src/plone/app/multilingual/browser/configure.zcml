@@ -204,6 +204,16 @@
       layer="..interfaces.IPloneAppMultilingualInstalled"
       />
 
+  <!-- override resolveuid to become translation-aware -->
+
+  <browser:page
+    name="resolveuid"
+    for="*"
+    class=".resolveuid.ResolveUIDView"
+    permission="zope.Public"
+    layer="..interfaces.IPloneAppMultilingualInstalled"
+    />
+
   <!-- GTranslate Service -->
 
   <configure zcml:condition="installed plone.dexterity">
